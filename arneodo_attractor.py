@@ -35,7 +35,7 @@ signal.signal(signal.SIGINT, handle_close)
 fig= plt.figure(facecolor="black")
 ax= fig.add_subplot(projection='3d')
 x_values, y_values, z_values= Arneodo()
-ln = ax.plot(x_values, y_values, z_values)
+ln, = ax.plot(x_values, y_values, z_values)
 
 #interval sets the speed of the animation
 animation = FuncAnimation(fig, animate, frames= len(x_values), init_func= init, interval= .01)
